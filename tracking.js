@@ -10,7 +10,7 @@ const TRACKING_CONFIG = {
   GOOGLE_ADS_CONVERSION_ID: 'AW-792175793', 
   
   // Google Ads Conversion Labels
-  GOOGLE_ADS_LABEL_DATA_ANALYSIS_LEAD: '', 
+  GOOGLE_ADS_LABEL_DATA_ANALYSIS_LEAD: 'iRdrCOLj0L8cELHJ3vkC', 
 
   // Future Hotmart Checkout URLs (Fill these once products are created)
   HOTMART_DATA_AUDIT_URL: '',
