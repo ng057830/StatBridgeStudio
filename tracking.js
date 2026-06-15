@@ -5,9 +5,9 @@
 
 const TRACKING_CONFIG = {
   // Google Analytics & Google Ads Global IDs (Replace with your actual IDs)
-  GOOGLE_TAG_ID: 'G-XXXXXXXXXX', 
+  GOOGLE_TAG_ID: 'AW-792175793', 
   GA4_MEASUREMENT_ID: 'G-XXXXXXXXXX', 
-  GOOGLE_ADS_CONVERSION_ID: 'AW-XXXXXXXXXX', 
+  GOOGLE_ADS_CONVERSION_ID: 'AW-792175793', 
   
   // Google Ads Conversion Labels
   GOOGLE_ADS_LABEL_DATA_ANALYSIS_LEAD: '', 
@@ -28,7 +28,7 @@ function isRealTrackingId(id) {
          id.trim() !== '' && 
          !id.includes('XXXX') && 
          !id.includes('XXXXXXXXXX') && 
-         !id.startsWith('G-') === (id === 'G-XXXXXXXXXX') && // check exact placeholder
+         id !== 'G-XXXXXXXXXX' && 
          id !== 'AW-XXXXXXXXXX';
 }
 
@@ -38,13 +38,19 @@ function isRealTrackingId(id) {
   generateLeadId();
   
   const gaId = TRACKING_CONFIG.GA4_MEASUREMENT_ID;
-  if (isRealTrackingId(gaId)) {
-    console.log(`[Tracking] Real GA4 Measurement ID detected (${gaId}). Dynamically loading gtag script.`);
+  const adsId = TRACKING_CONFIG.GOOGLE_ADS_CONVERSION_ID;
+  
+  const hasRealGa = isRealTrackingId(gaId);
+  const hasRealAds = isRealTrackingId(adsId);
+  
+  if (hasRealGa || hasRealAds) {
+    const primaryId = hasRealGa ? gaId : adsId;
+    console.log(`[Tracking] Real ID detected (${primaryId}). Dynamically loading gtag script.`);
     
     // Inject the gtag script tag dynamically
     const script = document.createElement('script');
     script.async = true;
-    script.src = `https://www.googletagmanager.com/gtag/js?id=${gaId}`;
+    script.src = `https://www.googletagmanager.com/gtag/js?id=${primaryId}`;
     document.head.appendChild(script);
 
     // Initialize the global dataLayer and gtag function
@@ -52,14 +58,15 @@ function isRealTrackingId(id) {
     window.gtag = window.gtag || function() { window.dataLayer.push(arguments); };
     
     gtag('js', new Date());
-    gtag('config', gaId, { 'anonymize_ip': true });
     
-    const adsId = TRACKING_CONFIG.GOOGLE_ADS_CONVERSION_ID;
-    if (isRealTrackingId(adsId)) {
+    if (hasRealGa) {
+      gtag('config', gaId, { 'anonymize_ip': true });
+    }
+    if (hasRealAds) {
       gtag('config', adsId);
     }
   } else {
-    console.log('[Tracking] GA4 Measurement ID is a placeholder or invalid. Skipping Google Tag load.');
+    console.log('[Tracking] No real GA4 Measurement ID or Google Ads Conversion ID detected. Skipping Google Tag load.');
   }
   
   if (document.readyState === 'loading') {
