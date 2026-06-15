@@ -1,19 +1,50 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
-  <!-- Rounded Background -->
-  <rect width="128" height="128" rx="28" fill="#0f172a"/>
-  <!-- Statistical Grid Lines (Subtle) -->
-  <line x1="24" y1="104" x2="104" y2="104" stroke="rgba(255,255,255,0.1)" stroke-width="2"/>
-  <line x1="24" y1="24" x2="24" y2="104" stroke="rgba(255,255,255,0.1)" stroke-width="2"/>
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#1e293b" />
+    </linearGradient>
+    
+    <!-- Bridge Arc Gradient -->
+    <linearGradient id="bridgeGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#2563eb" />
+      <stop offset="50%" stop-color="#60a5fa" />
+      <stop offset="100%" stop-color="#d97706" />
+    </linearGradient>
+    
+    <!-- Glowing Node Gradients -->
+    <radialGradient id="glowBlue" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#60a5fa" />
+      <stop offset="100%" stop-color="#2563eb" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+
+  <!-- Base Rounded Container -->
+  <rect width="128" height="128" rx="32" fill="url(#bgGrad)" stroke="rgba(255,255,255,0.05)" stroke-width="2"/>
   
-  <!-- Bridge / Arc of Data (representing connection/bridge) -->
-  <path d="M 24 88 Q 64 28 104 88" fill="none" stroke="rgba(37, 99, 235, 0.3)" stroke-width="4" stroke-dasharray="4 4"/>
+  <!-- Subtle Grid Pattern in background -->
+  <path d="M20 20 h88 M20 42 h88 M20 64 h88 M20 86 h88 M20 108 h88 M20 20 v88 M42 20 v88 M64 20 v88 M86 20 v88 M108 20 v88" stroke="rgba(255,255,255,0.03)" stroke-width="1"/>
+
+  <!-- Bar Chart Pillars (acting as the bridge piers) -->
+  <rect x="30" y="80" width="10" height="28" rx="3" fill="#2563eb" opacity="0.8"/>
+  <rect x="50" y="65" width="10" height="43" rx="3" fill="#3b82f6" opacity="0.85"/>
+  <rect x="70" y="55" width="10" height="53" rx="3" fill="#60a5fa" opacity="0.9"/>
+  <rect x="90" y="72" width="10" height="36" rx="3" fill="#d97706" opacity="0.85"/>
+
+  <!-- Bridge Arch (connecting the pillars, representing the "Bridge") -->
+  <path d="M 24 96 Q 64 24 104 96" fill="none" stroke="url(#bridgeGrad)" stroke-width="8" stroke-linecap="round"/>
   
-  <!-- Regression Line -->
-  <line x1="32" y1="92" x2="96" y2="36" stroke="#2563eb" stroke-width="6" stroke-linecap="round"/>
+  <!-- Outer glowing curve -->
+  <path d="M 24 96 Q 64 24 104 96" fill="none" stroke="#60a5fa" stroke-width="2" opacity="0.4" stroke-dasharray="2 3"/>
+
+  <!-- Glowing Connection Nodes / Scatter Points along the bridge -->
+  <circle cx="28" cy="88" r="5" fill="#2563eb"/>
+  <circle cx="46" cy="54" r="5" fill="#3b82f6"/>
+  <circle cx="64" cy="42" r="6" fill="#60a5fa"/>
+  <circle cx="82" cy="50" r="5" fill="#f59e0b"/>
+  <circle cx="100" cy="85" r="5" fill="#d97706"/>
   
-  <!-- Scatter Plot Points -->
-  <circle cx="40" cy="80" r="7" fill="#2563eb"/>
-  <circle cx="64" cy="56" r="7" fill="#b45309"/>
-  <circle cx="88" cy="48" r="7" fill="#2563eb"/>
-  <circle cx="50" cy="60" r="5" fill="#f43f5e" opacity="0.8"/> <!-- Outlier -->
+  <!-- Central Analytics / Regression Dot -->
+  <circle cx="64" cy="42" r="12" fill="url(#glowBlue)" opacity="0.5"/>
 </svg>
