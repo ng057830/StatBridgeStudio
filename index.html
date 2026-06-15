@@ -20,7 +20,7 @@
   <link rel="stylesheet" href="./styles.css">
   
   <!-- Central Tracking and Analytics Module -->
-  <script src="./tracking.js"></script>
+  <script src="./tracking.js" defer></script>
   
   <!-- Custom Scoped Styles for Data Lab -->
   <style>
@@ -192,6 +192,59 @@
       ]
     }
   </script>
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://statbridgestudio.com/">
+  <meta property="og:title" content="Statistical Analysis for Thesis & Research | StatBridge Studio">
+  <meta property="og:description" content="Professional statistical data analysis for thesis, surveys, and academic research. Support for SPSS, R, Python, regression, ANOVA, and Likert scales.">
+  <meta property="og:image" content="https://statbridgestudio.com/assets/images/favicon-logo.png">
+  <meta property="og:site_name" content="StatBridge Studio">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://statbridgestudio.com/">
+  <meta property="twitter:title" content="Statistical Analysis for Thesis & Research | StatBridge Studio">
+  <meta property="twitter:description" content="Professional statistical data analysis for thesis, surveys, and academic research. Support for SPSS, R, Python, regression, ANOVA, and Likert scales.">
+  <meta property="twitter:image" content="https://statbridgestudio.com/assets/images/favicon-logo.png">
+
+  <!-- Structured Data (JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "ProfessionalService",
+        "@id": "https://statbridgestudio.com/#organization",
+        "name": "StatBridge Studio",
+        "url": "https://statbridgestudio.com/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://statbridgestudio.com/assets/images/favicon-logo.png",
+          "caption": "StatBridge Studio Logo"
+        },
+        "image": "https://statbridgestudio.com/assets/images/favicon-logo.png",
+        "description": "Professional statistical data analysis for thesis, surveys, and academic research.",
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "US"
+        },
+        "priceRange": "$$",
+        "areaServed": ["US", "CA", "GB", "AU"],
+        "serviceType": ["Statistical Consultation", "Data Analysis", "Survey Analysis", "SPSS Consulting"]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://statbridgestudio.com/#website",
+        "url": "https://statbridgestudio.com/",
+        "name": "StatBridge Studio",
+        "publisher": {
+          "@id": "https://statbridgestudio.com/#organization"
+        }
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
 
@@ -324,12 +377,12 @@
         <div class="problem-grid">
           <div class="problem-intro">
             <span class="badge">Research Obstacles</span>
-            <h3>Stuck on your statistical results?</h3>
+            <h2>Stuck on your statistical results?</h2>
             <p style="margin-bottom: 1.5rem; font-size: 0.92rem; color: var(--clr-text-muted);">
               Many graduate students and academic researchers collect high-quality data but face bottlenecks during the analysis phase. Writing a thesis or research paper requires structured, clean statistical verification.
             </p>
             <div style="margin-top: 1.5rem; border-radius: var(--radius-lg); overflow: hidden; border: 1px solid var(--clr-border); box-shadow: var(--shadow-sm);">
-              <img src="./assets/images/thesis-analysis-ill.png" alt="Research data analysis support" style="width: 100%; height: auto; display: block;">
+              <img src="./assets/images/thesis-analysis-ill.png" alt="Research data analysis support" style="width: 100%; height: auto; display: block;" width="1024" height="1024" loading="lazy" decoding="async">
             </div>
           </div>
           

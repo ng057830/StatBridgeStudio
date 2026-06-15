@@ -640,7 +640,7 @@ main { flex-grow: 1; }
   align-items: center;
 }
 
-.problem-intro h3 { font-size: 1.5rem; margin-bottom: 0.75rem; }
+.problem-intro h2 { font-size: 1.5rem; margin-bottom: 0.75rem; }
 
 .problem-list { display: flex; flex-direction: column; gap: 1.25rem; }
 
