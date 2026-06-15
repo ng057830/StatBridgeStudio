@@ -1100,7 +1100,7 @@
         if (urlPackage) {
           hiddenPlanInput.value = urlPackage;
         } else {
-          hiddenPlanInput.value = 'no-lo-se';
+          hiddenPlanInput.value = 'General quote request';
         }
       }
     });
@@ -1123,7 +1123,7 @@
         }
 
         const leadId = document.getElementById("lead_id").value || localStorage.getItem("tmp_lead_id") || "lead_unknown";
-        const selectedPackage = document.getElementById("selected_plan").value || "no-lo-se";
+        const selectedPackage = document.getElementById("selected_plan").value || "General quote request";
         
         const selectedAnalyses = [];
         document.querySelectorAll('input[name="analysis_type"]:checked').forEach((checkbox) => {
@@ -1156,8 +1156,8 @@
         localStorage.setItem("tmp_da_lead_backup", JSON.stringify(leadData));
 
         const web3Payload = {
-          access_key: '401af540-d626-4642-b6c7-4ad5344d9a63',
-          subject: 'New Quote Request',
+          access_key: '946652bf-632e-4a49-8ba7-1bc61256f699',
+          subject: 'New Quote Request - StatBridge Studio',
           from_name: 'StatBridge Studio Support',
           ...leadData
         };
