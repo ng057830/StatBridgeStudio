@@ -13,7 +13,7 @@ const TRACKING_CONFIG = {
   GOOGLE_ADS_LABEL_DATA_ANALYSIS_LEAD: 'iRdrCOLj0L8cELHJ3vkC', 
 
   // Future Hotmart Checkout URLs (Fill these once products are created)
-  HOTMART_DATA_AUDIT_URL: '',
+  HOTMART_DATA_AUDIT_URL: 'https://pay.hotmart.com/Y106347415V',
   HOTMART_SURVEY_THESIS_ANALYSIS_URL: '',
   HOTMART_FULL_RESEARCH_REPORT_URL: ''
 };
