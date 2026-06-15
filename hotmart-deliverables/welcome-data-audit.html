@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome to Data Audit | StatBridge Studio</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+    
+    :root {
+      --clr-primary: #002B66;
+      --clr-accent: #2563eb;
+      --clr-gold: #b45309;
+      --clr-text: #0f172a;
+      --clr-text-light: #475569;
+      --clr-bg: #f8fafc;
+      --clr-surface: #ffffff;
+      --clr-border: #e2e8f0;
+      --radius-lg: 12px;
+      --radius-md: 8px;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background-color: var(--clr-bg);
+      color: var(--clr-text);
+      line-height: 1.6;
+      margin: 0;
+      padding: 2rem 1rem;
+      display: flex;
+      justify-content: center;
+    }
+
+    .page-container {
+      width: 100%;
+      max-width: 650px;
+      background: var(--clr-surface);
+      border: 1px solid var(--clr-border);
+      border-radius: var(--radius-lg);
+      padding: 3rem;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.02);
+    }
+
+    .header {
+      border-bottom: 2px solid var(--clr-border);
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .brand-title {
+      font-size: 1.4rem;
+      font-weight: 800;
+      color: var(--clr-primary);
+      text-decoration: none;
+      letter-spacing: -0.02em;
+    }
+
+    .brand-subtitle {
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      color: var(--clr-gold);
+      margin-top: 0.15rem;
+      display: block;
+    }
+
+    .badge {
+      background-color: #f1f5f9;
+      border: 1px solid var(--clr-border);
+      color: var(--clr-text-light);
+      padding: 0.35rem 0.75rem;
+      font-size: 0.75rem;
+      font-weight: 600;
+      border-radius: 50px;
+    }
+
+    h1 {
+      font-size: 1.75rem;
+      font-weight: 800;
+      color: var(--clr-primary);
+      margin-top: 0;
+      margin-bottom: 1rem;
+      letter-spacing: -0.02em;
+    }
+
+    .intro-p {
+      font-size: 1rem;
+      color: var(--clr-text-light);
+      margin-bottom: 2rem;
+    }
+
+    .steps-container {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .step-card {
+      background: #fafafb;
+      border: 1px solid var(--clr-border);
+      border-radius: var(--radius-md);
+      padding: 1.5rem;
+      display: flex;
+      gap: 1.25rem;
+      align-items: flex-start;
+    }
+
+    .step-num {
+      background: var(--clr-accent);
+      color: white;
+      font-weight: 700;
+      font-size: 0.9rem;
+      width: 1.75rem;
+      height: 1.75rem;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .step-content h3 {
+      margin: 0 0 0.5rem 0;
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--clr-primary);
+    }
+
+    .step-content p {
+      margin: 0;
+      font-size: 0.88rem;
+      color: var(--clr-text-light);
+      line-height: 1.5;
+    }
+
+    .email-link {
+      color: var(--clr-accent);
+      font-weight: 600;
+      text-decoration: underline;
+    }
+
+    .support-box {
+      border-top: 1px solid var(--clr-border);
+      padding-top: 1.5rem;
+      margin-top: 2.5rem;
+      text-align: center;
+      font-size: 0.82rem;
+      color: var(--clr-text-light);
+    }
+
+    .support-box p {
+      margin: 0.25rem 0;
+    }
+
+    @media print {
+      body {
+        background: white;
+        padding: 0;
+      }
+      .page-container {
+        border: none;
+        box-shadow: none;
+        padding: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="page-container">
+    <div class="header">
+      <div>
+        <div class="brand-title">StatBridge Studio</div>
+        <span class="brand-subtitle">Statistical & Research Support</span>
+      </div>
+      <span class="badge">Hotmart Delivery</span>
+    </div>
+
+    <main>
+      <h1>Thank you for purchasing the Data Audit!</h1>
+      <p class="intro-p">
+        Your project is in good hands. To begin evaluating your variables, checking hypothesis setups, and designing the statistical plan, please follow the steps below.
+      </p>
+
+      <div class="steps-container">
+        <!-- Step 1 -->
+        <div class="step-card">
+          <div class="step-num">1</div>
+          <div class="step-content">
+            <h3>Prepare your project files</h3>
+            <p>
+              Gather your dataset (Excel, CSV, or SPSS format) and your survey questionnaire or research draft. Ensure you have your specific research questions or target hypotheses ready.
+            </p>
+          </div>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="step-card">
+          <div class="step-num">2</div>
+          <div class="step-content">
+            <h3>Send the files by email</h3>
+            <p>
+              Send an email to <a href="mailto:hello@statbridgestudio.com" class="email-link">hello@statbridgestudio.com</a> with the subject line: <br>
+              <strong>[StatBridge] Files for Data Audit - [Your Name]</strong>
+            </p>
+          </div>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="step-card">
+          <div class="step-num">3</div>
+          <div class="step-content">
+            <h3>Diagnostic & Alignment</h3>
+            <p>
+              I will confirm receipt of your dataset within 24 hours. I will perform the diagnostic audit, verify variable distribution parameters, and reply with your written feedback and statistical plan.
+            </p>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <div class="support-box">
+      <p>Need help? Contact me directly at <a href="mailto:hello@statbridgestudio.com" class="email-link">hello@statbridgestudio.com</a></p>
+      <p>&copy; 2026 StatBridge Studio — All rights reserved.</p>
+    </div>
+  </div>
+
+</body>
+</html>
