@@ -5,8 +5,8 @@
 
 const TRACKING_CONFIG = {
   // Google Analytics & Google Ads Global IDs (Replace with your actual IDs)
-  GOOGLE_TAG_ID: 'AW-792175793', 
-  GA4_MEASUREMENT_ID: 'G-XXXXXXXXXX', 
+  GOOGLE_TAG_ID: 'G-P8VKXTFZH8', 
+  GA4_MEASUREMENT_ID: 'G-P8VKXTFZH8', 
   GOOGLE_ADS_CONVERSION_ID: 'AW-792175793', 
   
   // Google Ads Conversion Labels
