@@ -1,0 +1,11 @@
+# Environments and Secrets
+.env
+tools/google-ads-keywords/.env
+
+# Python caches
+__pycache__/
+*.pyc
+
+# OS generated files
+.DS_Store
+Thumbs.db

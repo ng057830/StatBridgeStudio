@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://statbridgestudio.com/sitemap.xml
