@@ -15,7 +15,7 @@ const TRACKING_CONFIG = {
   // Future Hotmart Checkout URLs (Fill these once products are created)
   HOTMART_DATA_AUDIT_URL: 'https://pay.hotmart.com/Y106347415V',
   HOTMART_SURVEY_THESIS_ANALYSIS_URL: 'https://pay.hotmart.com/C106347550B',
-  HOTMART_FULL_RESEARCH_REPORT_URL: ''
+  HOTMART_FULL_RESEARCH_REPORT_URL: 'https://pay.hotmart.com/J106347615X'
 };
 
 /**
